@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Sample text</h1>
+    <p id="result"></p>
+</body>
+<script>
+    var num1 = 10;
+    var num2 = 15;
+    var fName = null;
+    var price = 150;
+    // document.getElementById("title").innerText = "Hello World!";
+    document.getElementById("title").innerText = num1 + num2;
+    document.getElementById("result").innerText = fName;
+    console.log(fName);
+
+    //Question
+    // Considering the age of the user:
+    // if user is < 18 than discount should be 25%
+    // if user is between 18 and 25, discount should be 15%
+    // if user is between 25 and 35, discount should be 5%
+    // if user is above 35, no discount.
+    // Havin these conditions calculate the final price of a total sale 150$
+    // Age will be store in a variable calls userAge
+
+    // var userAge = 5;
+    // var price = 150;
+    // if (userAge < 18){
+    //     console.log("total price is "+price*0.75+"$");
+    // }else if(userAge >= 18 && userAge < 25){
+    //     console.log("total price is "+price*0.85+"$");
+    // }else if(userAge >= 25 && userAge < 35){
+    //     console.log("total price is "+price*0.95+"$");
+    // }else {
+    //     console.log("total price is "+price+"$");
+    // }
+    let finalPrice = 0;
+    let totalPrice = 150;
+    let discount = 0;
+    let userAge = 13;
+    if(userAge < 18){
+        discount = 0.25;
+    }
+    else if(userAge >= 18 && userAge < 25){
+        discount = 0.15;
+    }
+    else if(userAge >= 25 && userAge < 35){
+        discount = 0.05;
+    }
+    finalPrice = totalPrice - (totalPrice * discount);
+    console.log(finalPrice);
+</script>
+</html>
